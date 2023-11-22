@@ -8,6 +8,12 @@
 
 ## How to run
 
+```shell
+pnpm install
+pnpm build
+pnpm preview
+```
+
 ## Improvements
 
 - Tests

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, TextField, InputAdornment } from '@mui/material';
+import { TextField, InputAdornment } from '@mui/material';
 import Magnify from '../assets/magnify.svg';
 
 type SearchInputProps = {

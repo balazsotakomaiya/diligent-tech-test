@@ -1,21 +1,13 @@
 import React, { useReducer } from 'react'
 import { initialState, reducer } from "./reducer.ts";
 import {
-    AppBar,
     Box,
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableRow,
-    Toolbar,
-    Typography
 } from "@mui/material";
 import _ from 'lodash';
-import logo from './assets/logo.svg';
 import AddItemForm from "./components/AddItemForm.tsx";
 import SearchInput from "./components/SearchInput.tsx";
 import ItemsTable from "./components/ItemsTable.tsx";
+import Navbar from "./components/Navbar.tsx";
 
 const App: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -28,16 +20,7 @@ const App: React.FC = () => {
 
     return (
         <>
-            <AppBar position="static" style={{ backgroundColor: 'white', color: 'black' }}>
-                <Toolbar>
-                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-                        <img src={logo} alt="Logo" style={{ marginRight: 10 }}/>
-                        <Typography variant="h6" component="div">
-                            Assets
-                        </Typography>
-                    </Box>
-                </Toolbar>
-            </AppBar>
+            <Navbar />
 
             <Box marginTop={8} marginLeft={8} marginRight={8}>
                 <Box marginBottom={2}>
